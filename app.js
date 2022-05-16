@@ -49,7 +49,7 @@ app.get("/select", (request, response) =>
         response.send(res);
     })
 });
-//UPDATE (syntax on row 55 might be wrong)
+//UPDATE
 app.get("/update", (request, response) =>
 {
     let sql = "UPDATE games SET game_rating = 9 WHERE id = 1;"
