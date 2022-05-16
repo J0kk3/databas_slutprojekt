@@ -1,5 +1,5 @@
 const express = require("express");
-const mySql = require("mysql2");
+const mysql = require("mysql2");
 
 const app = express();
 
@@ -26,14 +26,14 @@ dbConnection.connect((err) =>
     console.log("MySQL connection established.");
 });
 
-app.get("/gettablename", (res, req) =>
+app.get("/gettablename", (request, response) =>
 {
-    let sql = "SELECT * FROM Movies;"
+    let sql = "SELECT * FROM games;"
 
     dbConnection.query(sql,(err, res) =>
     {
         if (err) throw err;
         console.log(res);
-        res.send(res);
+        response.send(res);
     })
 });
