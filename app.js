@@ -8,12 +8,13 @@ app.listen(3000, () =>
     console.log("Server listening on port 3000");
 });
 
+//database connection
 const dbConnection = mysql.createConnection
 ({
-    host: "127.0.0.1",
-    port: "3306",
+    host: "localhost",
+    port: "3000",
     user: "root",
-    password: "30Oktober1988!",
+    password: "yourpassword",
     database: "slutprojekt"
 });
 
